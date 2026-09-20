@@ -1,0 +1,6 @@
+{
+  "name": "BE STRONG FITNESS STUDIO",
+  "description": "BE STRONG FITNESS STUDIO - Premium luxury fitness studio with state-of-the-art strength training, personal coaching, couple memberships, and steam bath recovery.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

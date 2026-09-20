@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Outfit', 'Cinzel', sans-serif;
+  }
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-outfit {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Luxury Metallic Gold Utilities */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FFF0B3 0%, #DFB76C 35%, #C8963E 70%, #F5D061 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #F5D061 0%, #DFB76C 45%, #B8860B 100%);
+}
+
+.bg-gold-gradient-hover:hover {
+  background: linear-gradient(135deg, #FFE082 0%, #F3C35D 50%, #C99317 100%);
+}
+
+.gold-glow {
+  box-shadow: 0 0 25px -5px rgba(212, 175, 55, 0.25);
+}
+
+.gold-glow-lg {
+  box-shadow: 0 0 45px -5px rgba(212, 175, 55, 0.4);
+}
+
+.dark-card {
+  background: linear-gradient(180deg, rgba(26, 28, 35, 0.85) 0%, rgba(16, 17, 22, 0.95) 100%);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.dark-card:hover {
+  border-color: rgba(212, 175, 55, 0.4);
+}
