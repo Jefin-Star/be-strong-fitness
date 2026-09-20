@@ -36,8 +36,9 @@ export const Hero: React.FC = () => {
         </div>
 
         {/* Main Gym Name Headline */}
-        <h1 className="font-cinzel text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-white uppercase leading-[1.08] mb-4">
-          BE STRONG <span className="text-gold-gradient">FITNESS STUDIO</span>
+        <h1 className="font-cinzel text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight uppercase leading-[1.08] mb-4">
+          <span className="text-[#e5252a] drop-shadow-[0_2px_14px_rgba(229,37,42,0.4)]">BE STRONG</span>{' '}
+          <span className="text-gold-gradient">FITNESS STUDIO</span>
         </h1>
 
         {/* Tagline */}
