@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import logoImg from '../assets/logo.jpg';
 
 interface GymLogoProps {
   className?: string;
@@ -28,7 +29,7 @@ export const GymLogo: React.FC<GymLogoProps> = ({
       >
         {!imgError ? (
           <img
-            src="/logo.jpg"
+            src={logoImg}
             alt="BE STRONG FITNESS STUDIO"
             className="w-full h-full object-contain rounded-lg transition-transform duration-300 group-hover:scale-105"
             referrerPolicy="no-referrer"

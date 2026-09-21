@@ -1,7 +1,7 @@
 import React from 'react';
 import { GymLogo } from './GymLogo';
 import { GYM_INFO } from '../data/gymData';
-import { MessageCircle, Mail, MapPin, ArrowUp, ShieldCheck, Heart } from 'lucide-react';
+import { MessageCircle, Mail, ArrowUp, ShieldCheck } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {

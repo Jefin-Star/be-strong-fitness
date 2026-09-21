@@ -52,6 +52,7 @@ export const Facilities: React.FC = () => {
                 src={activeFacility.imageUrl}
                 alt={activeFacility.title}
                 className="w-full h-72 sm:h-96 object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs">

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { MessageCircle, Phone, ArrowUp } from 'lucide-react';
+import { MessageCircle, ArrowUp } from 'lucide-react';
 import { GYM_INFO } from '../data/gymData';
 
 export const FloatingActions: React.FC = () => {

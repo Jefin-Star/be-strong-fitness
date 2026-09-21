@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, ShieldCheck, Dumbbell, Flame, Sparkles, Award, Users } from 'lucide-react';
+import { ArrowRight, Dumbbell, Flame, Award, Users } from 'lucide-react';
 import { GYM_INFO } from '../data/gymData';
 
 export const Hero: React.FC = () => {
@@ -12,6 +12,7 @@ export const Hero: React.FC = () => {
           alt="BE STRONG FITNESS STUDIO Luxury Fitness Studio"
           className="w-full h-full object-cover object-center opacity-35 filter contrast-110 brightness-90 scale-105 transition-transform duration-1000"
           loading="eager"
+          referrerPolicy="no-referrer"
         />
         {/* Multilayer Dark & Metallic Vignette */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#0b0c10] via-[#0b0c10]/80 to-black/60" />

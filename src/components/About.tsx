@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dumbbell, Users, HeartPulse, Sparkles, CheckCircle2, Shield, Flame } from 'lucide-react';
+import { Dumbbell, Users, HeartPulse, Sparkles, Flame } from 'lucide-react';
 import { GYM_INFO } from '../data/gymData';
 
 export const About: React.FC = () => {
@@ -102,6 +102,7 @@ export const About: React.FC = () => {
                 src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=800&q=80"
                 alt="Strength Training Floor at Be Strong Fitness Studio"
                 className="w-full h-[360px] object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
               

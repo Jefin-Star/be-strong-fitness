@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { MEMBERSHIP_PLANS, GYM_INFO } from '../data/gymData';
 import { MembershipPlan } from '../types';
-import { Check, Sparkles, AlertCircle, ArrowRight, ShieldCheck, Flame, Users, Clock, Award } from 'lucide-react';
+import { Check, Sparkles, AlertCircle, ArrowRight, ShieldCheck, Clock } from 'lucide-react';
 
 interface MembershipPlansProps {
   onSelectPlan: (planId: string) => void;

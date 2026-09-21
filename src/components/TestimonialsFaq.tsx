@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { TESTIMONIALS, FAQS } from '../data/gymData';
-import { Star, ChevronDown, ChevronUp, MessageSquare, Quote, Sparkles } from 'lucide-react';
+import { Star, ChevronDown, ChevronUp, Sparkles } from 'lucide-react';
 
 export const TestimonialsFaq: React.FC = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(0);

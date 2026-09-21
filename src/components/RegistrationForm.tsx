@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { MEMBERSHIP_PLANS, GYM_INFO } from '../data/gymData';
 import { RegistrationFormData, RegistrationSubmission } from '../types';
 import { RegistrationSuccessModal } from './RegistrationSuccessModal';
-import { Send, User, Phone, Mail, Calendar, Target, CheckCircle, AlertCircle, Sparkles, ShieldCheck } from 'lucide-react';
+import { Send, User, Phone, Mail, Calendar, AlertCircle, Sparkles, ShieldCheck } from 'lucide-react';
 
 interface RegistrationFormProps {
   selectedPlanId: string;
@@ -95,13 +95,15 @@ export const RegistrationForm: React.FC<RegistrationFormProps> = ({
       status: 'confirmed',
     };
 
-    // Save to localStorage
+    // Save to localStorage safely
     try {
-      const existing = JSON.parse(localStorage.getItem('bestrong_registrations') || '[]');
-      existing.unshift(submission);
-      localStorage.setItem('bestrong_registrations', JSON.stringify(existing));
+      const raw = localStorage.getItem('bestrong_registrations');
+      const existing = raw ? JSON.parse(raw) : [];
+      const list = Array.isArray(existing) ? existing : [];
+      list.unshift(submission);
+      localStorage.setItem('bestrong_registrations', JSON.stringify(list));
     } catch {
-      // ignore
+      // ignore potential quota or storage errors
     }
 
     setTimeout(() => {
