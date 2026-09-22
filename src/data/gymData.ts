@@ -407,25 +407,25 @@ export const FACILITIES: Facility[] = [
 
 export const TESTIMONIALS = [
   {
-    name: 'Arjun Menon',
-    role: 'Member for 1 Year',
-    text: 'Lost 14 kgs and gained real muscle definition. The trainers at Be Strong Fitness Studio are attentive and knowledgeable. The atmosphere is motivating without being intimidating.',
+    name: 'Lekshmi Vishwanathan',
+    role: 'Verified Google Review (16 reviews)',
+    text: 'I approached ANANDU with very low confidence, but in just one month, he gave me so much confidence and motivation. He helped me reduce more than 5 kg in a month, and I’m truly grateful for all the support and encouragement!',
     rating: 5,
-    transformation: '-14 kg Fat Loss'
+    transformation: '-5 kg in 1 Month'
   },
   {
-    name: 'Ananya Pillai',
-    role: 'Couple Package Member',
-    text: 'My husband and I joined the Couple General training program. The gym is super clean, respectful, and safe for women. The steam bath facility after heavy leg days is an absolute luxury!',
+    name: 'Samitha Sn',
+    role: 'Verified Google Review (4 reviews)',
+    text: 'I visited many unisex gyms. But "BE STRONG" Gym has a great atmosphere where women can work out safely until 10 PM without any fear. I am very satisfied with the clean and safe environment.',
     rating: 5,
-    transformation: 'Couple Fitness Goal'
+    transformation: 'Women Safe till 10 PM'
   },
   {
-    name: 'Rahul Nair',
-    role: '1-on-1 Personal Training',
-    text: 'Best fitness studio in town! The equipment is well-maintained and the 3-month PT package completely overhauled my strength and posture. Worth every rupee.',
+    name: 'Kadeeja Manika',
+    role: 'Verified Google Review',
+    text: 'I sit most of the day for work, so knee pain was a real issue initially… With regular movement and proper guidance, my flexibility has improved and the knee pain is gone completely.',
     rating: 5,
-    transformation: '+6 kg Lean Muscle'
+    transformation: 'Knee Pain Relieved'
   }
 ];
 

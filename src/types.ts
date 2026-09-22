@@ -54,3 +54,21 @@ export interface GymService {
   iconName: string;
   recommendedPlanId?: string;
 }
+
+export interface GoogleReview {
+  id: string;
+  author: string;
+  avatarColor?: string;
+  badge?: string;
+  isLocalGuide?: boolean;
+  rating: number;
+  timeAgo: string;
+  text: string;
+  trainerMentioned?: string;
+  category: 'trainers' | 'rehab' | 'women_safety' | 'transformations' | 'general';
+  ownerResponse?: {
+    timeAgo: string;
+    text: string;
+  };
+}
+

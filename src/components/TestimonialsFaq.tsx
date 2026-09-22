@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { TESTIMONIALS, FAQS } from '../data/gymData';
-import { Star, ChevronDown, ChevronUp, Sparkles } from 'lucide-react';
+import { FAQS } from '../data/gymData';
+import { ChevronDown, ChevronUp, HelpCircle, MessageCircle } from 'lucide-react';
+import { GYM_INFO } from '../data/gymData';
 
 export const TestimonialsFaq: React.FC = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -10,99 +11,67 @@ export const TestimonialsFaq: React.FC = () => {
   };
 
   return (
-    <section className="py-20 sm:py-24 px-4 sm:px-6 lg:px-8 bg-[#0b0c10] relative">
-      <div className="max-w-7xl mx-auto space-y-20">
-        {/* Testimonials */}
-        <div>
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#d4af37]/10 border border-[#d4af37]/30 text-xs font-semibold uppercase tracking-widest text-[#f5d061] mb-3">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Real Transformations</span>
-            </div>
-            <h2 className="font-cinzel text-3xl sm:text-4xl font-extrabold text-white tracking-tight uppercase">
-              Member <span className="text-gold-gradient">Stories & Experiences</span>
-            </h2>
-            <p className="mt-3 text-sm sm:text-base text-neutral-300 font-light">
-              Hear from our community of dedicated lifters, fitness enthusiasts, and couples.
-            </p>
+    <section id="faq" className="py-20 sm:py-24 px-4 sm:px-6 lg:px-8 bg-[#0b0c10] relative">
+      <div className="max-w-4xl mx-auto">
+        {/* FAQs Header */}
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#d4af37]/10 border border-[#d4af37]/30 text-xs font-semibold uppercase tracking-widest text-[#f5d061] mb-3">
+            <HelpCircle className="w-3.5 h-3.5" />
+            <span>Got Questions? We Have Answers</span>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-            {TESTIMONIALS.map((testimonial, idx) => (
-              <div
-                key={idx}
-                className="relative rounded-2xl bg-neutral-900/60 border border-neutral-800 p-6 sm:p-7 flex flex-col justify-between hover:border-[#d4af37]/40 transition-all shadow-xl"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex text-amber-400">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-current" />
-                      ))}
-                    </div>
-                    <span className="px-2.5 py-0.5 rounded-full bg-[#d4af37]/15 text-[#f5d061] text-[11px] font-bold">
-                      {testimonial.transformation}
-                    </span>
-                  </div>
-
-                  <p className="text-neutral-300 text-sm leading-relaxed mb-6 italic">
-                    "{testimonial.text}"
-                  </p>
-                </div>
-
-                <div className="pt-4 border-t border-neutral-800 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#d4af37] to-amber-700 flex items-center justify-center text-black font-bold text-sm">
-                    {testimonial.name[0]}
-                  </div>
-                  <div>
-                    <p className="font-bold text-white text-sm">{testimonial.name}</p>
-                    <p className="text-xs text-neutral-400">{testimonial.role}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <h2 className="font-cinzel text-3xl sm:text-4xl font-extrabold text-white tracking-tight uppercase">
+            Frequently Asked <span className="text-gold-gradient">Questions</span>
+          </h2>
+          <p className="mt-3 text-sm sm:text-base text-neutral-300 font-light max-w-xl mx-auto">
+            Everything you need to know regarding admissions, registration fees, steam bath facilities, and rehab programs.
+          </p>
         </div>
 
-        {/* FAQs */}
-        <div className="max-w-4xl mx-auto pt-8 border-t border-neutral-800/80">
-          <div className="text-center mb-10">
-            <h3 className="font-cinzel text-2xl sm:text-3xl font-extrabold text-white uppercase">
-              Frequently Asked <span className="text-gold-gradient">Questions</span>
-            </h3>
-            <p className="text-xs sm:text-sm text-neutral-400 mt-2">
-              Everything you need to know about joining BE STRONG FITNESS STUDIO.
-            </p>
-          </div>
-
-          <div className="space-y-3">
-            {FAQS.map((faq, index) => {
-              const isOpen = openFaq === index;
-              return (
-                <div
-                  key={index}
-                  className="rounded-xl bg-neutral-900/50 border border-neutral-800 overflow-hidden transition-all"
+        {/* FAQs Accordion */}
+        <div className="space-y-3.5">
+          {FAQS.map((faq, index) => {
+            const isOpen = openFaq === index;
+            return (
+              <div
+                key={index}
+                className="rounded-2xl bg-neutral-900/60 border border-neutral-800/90 overflow-hidden transition-all duration-200 shadow-lg"
+              >
+                <button
+                  onClick={() => toggleFaq(index)}
+                  className="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 text-white font-medium text-sm sm:text-base hover:text-[#d4af37] transition-colors cursor-pointer"
                 >
-                  <button
-                    onClick={() => toggleFaq(index)}
-                    className="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 text-white font-medium text-sm sm:text-base hover:text-[#d4af37] transition-colors"
-                  >
-                    <span>{faq.question}</span>
-                    {isOpen ? (
-                      <ChevronUp className="w-5 h-5 text-[#d4af37] flex-shrink-0" />
-                    ) : (
-                      <ChevronDown className="w-5 h-5 text-neutral-400 flex-shrink-0" />
-                    )}
-                  </button>
-                  {isOpen && (
-                    <div className="px-4 sm:px-5 pb-5 pt-1 text-neutral-300 text-xs sm:text-sm leading-relaxed border-t border-neutral-800/60 bg-black/30">
-                      {faq.answer}
-                    </div>
+                  <span className="font-semibold">{faq.question}</span>
+                  {isOpen ? (
+                    <ChevronUp className="w-5 h-5 text-[#d4af37] flex-shrink-0" />
+                  ) : (
+                    <ChevronDown className="w-5 h-5 text-neutral-400 flex-shrink-0" />
                   )}
-                </div>
-              );
-            })}
+                </button>
+                {isOpen && (
+                  <div className="px-4 sm:px-5 pb-5 pt-1 text-neutral-300 text-xs sm:text-sm leading-relaxed border-t border-neutral-800/60 bg-black/40">
+                    {faq.answer}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Still have questions card */}
+        <div className="mt-10 p-5 rounded-2xl bg-neutral-900/40 border border-neutral-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+          <div>
+            <p className="text-sm font-bold text-white">Have a specific question not listed here?</p>
+            <p className="text-xs text-neutral-400 mt-0.5">Our front desk team is available Mon–Sat (5:30 AM – 10:00 PM) to assist you.</p>
           </div>
+          <a
+            href={`https://wa.me/${GYM_INFO.phoneRaw}?text=Hi%20Be%20Strong%20Fitness%20Studio%2C%20I%20have%20a%20question%20regarding%20membership`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-neutral-800 text-[#25D366] hover:bg-neutral-700 transition-colors border border-neutral-700 flex-shrink-0"
+          >
+            <MessageCircle className="w-4 h-4 fill-current" />
+            <span>Chat on WhatsApp</span>
+          </a>
         </div>
       </div>
     </section>

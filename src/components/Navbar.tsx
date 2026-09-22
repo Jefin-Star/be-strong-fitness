@@ -28,6 +28,7 @@ export const Navbar: React.FC<NavbarProps> = () => {
     { name: 'Services & Rehab', href: '#services' },
     { name: 'Facilities', href: '#facilities' },
     { name: 'Membership Plans', href: '#membership' },
+    { name: 'Google Reviews', href: '#google-reviews' },
     { name: 'Registration', href: '#register' },
     { name: 'Contact & Location', href: '#contact' },
   ];

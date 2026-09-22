@@ -51,6 +51,12 @@ export const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
+                <a href="#google-reviews" className="hover:text-[#d4af37] transition-colors flex items-center gap-1.5">
+                  <span>Google Reviews</span>
+                  <span className="text-[10px] px-1.5 py-0.2 rounded bg-amber-500/20 text-[#f5d061] font-bold">4.9 ★</span>
+                </a>
+              </li>
+              <li>
                 <a href="#register" className="hover:text-[#d4af37] transition-colors">
                   Join / Register
                 </a>

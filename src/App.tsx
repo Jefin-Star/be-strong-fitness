@@ -6,6 +6,7 @@ import { ServicesSection } from './components/ServicesSection';
 import { Facilities } from './components/Facilities';
 import { MembershipPlans } from './components/MembershipPlans';
 import { RegistrationForm } from './components/RegistrationForm';
+import { GoogleReviewsSection } from './components/GoogleReviewsSection';
 import { TestimonialsFaq } from './components/TestimonialsFaq';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
@@ -45,6 +46,7 @@ export default function App() {
           onPlanChange={setSelectedPlanId} 
           selectedGoal={selectedGoal}
         />
+        <GoogleReviewsSection />
         <TestimonialsFaq />
         <ContactSection />
       </main>

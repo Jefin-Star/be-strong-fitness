@@ -25,15 +25,36 @@ export const Hero: React.FC = () => {
       {/* Hero Content */}
       <div className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center">
         {/* Top Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-neutral-900/90 border border-[#d4af37]/40 shadow-lg shadow-black/80 mb-6 backdrop-blur-md">
-          <span className="flex h-2 w-2 rounded-full bg-[#d4af37] animate-pulse" />
-          <span className="text-xs uppercase tracking-[0.25em] font-semibold text-amber-200">
-            {GYM_INFO.brandTag}
-          </span>
-          <span className="text-neutral-500">|</span>
-          <span className="text-xs font-medium text-neutral-300">
-            Premium Unisex Fitness Studio
-          </span>
+        <div className="flex flex-wrap items-center justify-center gap-2.5 mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-neutral-900/90 border border-[#d4af37]/40 shadow-lg shadow-black/80 backdrop-blur-md">
+            <span className="flex h-2 w-2 rounded-full bg-[#d4af37] animate-pulse" />
+            <span className="text-xs uppercase tracking-[0.25em] font-semibold text-amber-200">
+              {GYM_INFO.brandTag}
+            </span>
+            <span className="text-neutral-500">|</span>
+            <span className="text-xs font-medium text-neutral-300">
+              Premium Unisex Fitness Studio
+            </span>
+          </div>
+
+          <a
+            href="#google-reviews"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-neutral-900/90 border border-neutral-700 hover:border-[#d4af37] text-xs text-neutral-300 hover:text-white transition-all backdrop-blur-md shadow-md"
+            title="Read 250+ Google Reviews"
+          >
+            <span className="flex items-center gap-0.5 font-bold text-white text-[11px]">
+              <span className="text-[#4285F4]">G</span>
+              <span className="text-[#EA4335]">o</span>
+              <span className="text-[#FBBC05]">o</span>
+              <span className="text-[#4285F4]">g</span>
+              <span className="text-[#34A853]">l</span>
+              <span className="text-[#EA4335]">e</span>
+            </span>
+            <span className="text-[#f5d061] font-bold text-xs flex items-center gap-0.5">
+              ★ 4.9
+            </span>
+            <span className="text-neutral-400 text-[11px]">(250+ Reviews)</span>
+          </a>
         </div>
 
         {/* Main Gym Name Headline */}
