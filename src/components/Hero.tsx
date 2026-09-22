@@ -48,12 +48,12 @@ export const Hero: React.FC = () => {
         </p>
 
         {/* Supporting description */}
-        <p className="text-sm sm:text-base md:text-lg text-neutral-300 max-w-2xl font-normal leading-relaxed mb-10">
-          Trivandrum's premier fitness destination combining world-class heavy strength training, certified personal coaches, supportive unisex culture, and therapeutic steam bath recovery.
+        <p className="text-sm sm:text-base md:text-lg text-neutral-300 max-w-2xl font-normal leading-relaxed mb-8">
+          Trivandrum's premier fitness destination combining heavy strength training, clinical rehabilitation (Knee, Back, Cervical Spondylitis, Scoliosis), hormone/PCOD conditioning, CrossFit, and therapeutic steam bath recovery.
         </p>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mb-14">
+        <div className="flex flex-col sm:flex-row items-center gap-3.5 w-full sm:w-auto mb-12">
           <a
             href="#register"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl text-base font-bold tracking-wider uppercase text-black bg-gold-gradient hover:brightness-110 transition-all transform hover:-translate-y-0.5 gold-glow shadow-xl"
@@ -64,11 +64,19 @@ export const Hero: React.FC = () => {
           </a>
 
           <a
+            href="#services"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-base font-semibold tracking-wide text-neutral-200 bg-neutral-900/80 hover:bg-neutral-800 border border-[#d4af37]/30 hover:border-[#d4af37] transition-all backdrop-blur-md"
+            id="hero-explore-services-btn"
+          >
+            <span>Specialized Services & Rehab</span>
+          </a>
+
+          <a
             href="#membership"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-semibold tracking-wide text-neutral-200 bg-neutral-900/80 hover:bg-neutral-800 border border-[#d4af37]/30 hover:border-[#d4af37] transition-all backdrop-blur-md"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-base font-semibold tracking-wide text-neutral-400 hover:text-white transition-colors"
             id="hero-view-plans-btn"
           >
-            <span>View Membership Plans</span>
+            <span>View Plans</span>
           </a>
         </div>
 

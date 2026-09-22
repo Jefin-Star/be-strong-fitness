@@ -40,3 +40,17 @@ export interface Facility {
   imageUrl: string;
   features: string[];
 }
+
+export interface GymService {
+  id: string;
+  title: string;
+  category: 'rehab' | 'specialized' | 'performance' | 'personal' | 'wellness';
+  categoryLabel: string;
+  tag: string;
+  shortDesc: string;
+  fullDesc: string;
+  benefits: string[];
+  idealFor: string;
+  iconName: string;
+  recommendedPlanId?: string;
+}

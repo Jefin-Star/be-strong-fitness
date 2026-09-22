@@ -39,7 +39,7 @@ export const About: React.FC = () => {
                 At <strong className="text-white">BE STRONG FITNESS STUDIO</strong>, our mission is to make elite fitness, strength training, and recovery accessible to all. Whether you are lifting weights for the first time or looking to break your personal powerlifting records, our supportive culture ensures you train with pride, safety, and confidence.
               </p>
               <p className="text-neutral-400 text-sm sm:text-base leading-relaxed">
-                We bridge the gap between heavy athletic conditioning and welcoming lifestyle fitness. Featuring separate modern locker rooms, dedicated coaching zones, specialized couple packages, and an in-house therapeutic steam bath facility, we support your entire transformation cycle.
+                We bridge the gap between heavy athletic conditioning, specialized clinical rehabilitation (Knee rehab, Cervical Spondylitis, Back Pain, Scoliosis, PCOD/PCOS, and Post-Pregnancy care), and welcoming lifestyle fitness. Featuring modern amenities, dedicated coaching zones, specialized couple training, and an in-house therapeutic steam bath facility, we support your entire transformation cycle.
               </p>
             </div>
 

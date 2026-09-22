@@ -7,11 +7,13 @@ import { Send, User, Phone, Mail, Calendar, AlertCircle, Sparkles, ShieldCheck }
 interface RegistrationFormProps {
   selectedPlanId: string;
   onPlanChange: (id: string) => void;
+  selectedGoal?: string;
 }
 
 export const RegistrationForm: React.FC<RegistrationFormProps> = ({
   selectedPlanId,
   onPlanChange,
+  selectedGoal,
 }) => {
   const [formData, setFormData] = useState<RegistrationFormData>({
     fullName: '',
@@ -19,7 +21,7 @@ export const RegistrationForm: React.FC<RegistrationFormProps> = ({
     email: '',
     planId: selectedPlanId || MEMBERSHIP_PLANS[0].id,
     startDate: new Date().toISOString().split('T')[0],
-    fitnessGoals: '',
+    fitnessGoals: selectedGoal || '',
   });
 
   const [errors, setErrors] = useState<Partial<Record<keyof RegistrationFormData, string>>>({});
@@ -33,6 +35,13 @@ export const RegistrationForm: React.FC<RegistrationFormProps> = ({
       setFormData((prev) => ({ ...prev, planId: selectedPlanId }));
     }
   }, [selectedPlanId]);
+
+  // Sync when prop selectedGoal updates
+  useEffect(() => {
+    if (selectedGoal) {
+      setFormData((prev) => ({ ...prev, fitnessGoals: selectedGoal }));
+    }
+  }, [selectedGoal]);
 
   const validate = (): boolean => {
     const newErrors: Partial<Record<keyof RegistrationFormData, string>> = {};
@@ -337,15 +346,70 @@ export const RegistrationForm: React.FC<RegistrationFormProps> = ({
 
             {/* Message / Fitness Goals */}
             <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-2">
-                Message / Fitness Goals (Optional)
-              </label>
+              <div className="flex items-center justify-between mb-2">
+                <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-300">
+                  Select Service / Fitness Goal (Optional)
+                </label>
+                <span className="text-[11px] text-neutral-400">Click to select</span>
+              </div>
+
+              {/* Quick Select Service Chips */}
+              <div className="flex flex-wrap gap-1.5 mb-3">
+                {[
+                  'Knee Rehab',
+                  'Cervical Spondylitis',
+                  'Back Pain Relief',
+                  'PCOD / PCOS / Thyroid',
+                  'Post Pregnancy Rehab',
+                  'Scoliosis Support',
+                  'Senior Citizen Training',
+                  'Crossfit',
+                  'Group Training',
+                  'Personal Training',
+                  'Couple Training',
+                  'HIIT Training',
+                  'Steam Bath',
+                  'Weight Loss',
+                  'Muscle Hypertrophy'
+                ].map((tag) => {
+                  const isSelected = formData.fitnessGoals.toLowerCase().includes(tag.toLowerCase());
+                  return (
+                    <button
+                      key={tag}
+                      type="button"
+                      onClick={() => {
+                        if (isSelected) {
+                          // Remove
+                          const updated = formData.fitnessGoals
+                            .replace(new RegExp(tag + '[, ]*', 'gi'), '')
+                            .trim();
+                          setFormData({ ...formData, fitnessGoals: updated });
+                        } else {
+                          // Add
+                          const updated = formData.fitnessGoals.trim() 
+                            ? `${formData.fitnessGoals.trim()}, ${tag}` 
+                            : tag;
+                          setFormData({ ...formData, fitnessGoals: updated });
+                        }
+                      }}
+                      className={`text-[11px] px-2.5 py-1 rounded-lg border transition-all cursor-pointer ${
+                        isSelected
+                          ? 'bg-[#d4af37] text-black border-[#d4af37] font-bold shadow-sm'
+                          : 'bg-neutral-900 text-neutral-300 border-neutral-800 hover:border-[#d4af37]/50 hover:text-white'
+                      }`}
+                    >
+                      {isSelected ? `✓ ${tag}` : `+ ${tag}`}
+                    </button>
+                  );
+                })}
+              </div>
+
               <div className="relative">
                 <textarea
-                  rows={3}
+                  rows={2}
                   value={formData.fitnessGoals}
                   onChange={(e) => setFormData({ ...formData, fitnessGoals: e.target.value })}
-                  placeholder="e.g. Weight loss, strength training, muscle hypertrophy, general fitness..."
+                  placeholder="e.g. Knee rehab, Back pain relief, Weight loss, PCOD conditioning..."
                   className="w-full px-4 py-3 rounded-xl bg-black/60 border border-neutral-800 text-white text-sm focus:outline-none focus:border-[#d4af37] transition-all resize-none"
                 />
               </div>
