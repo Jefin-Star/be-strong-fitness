@@ -61,7 +61,7 @@ export const TestimonialsFaq: React.FC = () => {
         <div className="mt-10 p-5 rounded-2xl bg-neutral-900/40 border border-neutral-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
           <div>
             <p className="text-sm font-bold text-white">Have a specific question not listed here?</p>
-            <p className="text-xs text-neutral-400 mt-0.5">Our front desk team is available Mon–Sat (5:30 AM – 10:00 PM) to assist you.</p>
+            <p className="text-xs text-neutral-400 mt-0.5">Our front desk team is available Mon–Sat ({GYM_INFO.timings.weekdays}) to assist you.</p>
           </div>
           <a
             href={`https://wa.me/${GYM_INFO.phoneRaw}?text=Hi%20Be%20Strong%20Fitness%20Studio%2C%20I%20have%20a%20question%20regarding%20membership`}

@@ -12,7 +12,7 @@ export const GYM_INFO = {
   mapsEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3945.5075912941466!2d76.91424617501325!3d8.547089991496271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwMzInNDkuNSJOIDc2wrA1NScwMC42IkU!5e0!3m2!1sen!2sin!4v1789910089606!5m2!1sen!2sin',
   registrationFee: 750,
   timings: {
-    weekdays: '5:30 AM – 10:00 PM',
+    weekdays: '5:00 AM – 10:00 PM',
     sunday: '6:00 AM – 1:00 PM',
     steamBath: 'Available Daily (Pre-booking required)'
   }

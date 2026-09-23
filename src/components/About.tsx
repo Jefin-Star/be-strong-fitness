@@ -122,7 +122,7 @@ export const About: React.FC = () => {
             {/* Quick Metrics Bar */}
             <div className="grid grid-cols-3 gap-3 p-4 rounded-xl bg-neutral-900/80 border border-neutral-800 text-center">
               <div>
-                <p className="font-cinzel text-2xl sm:text-3xl font-black text-[#f5d061]">5:30 AM</p>
+                <p className="font-cinzel text-2xl sm:text-3xl font-black text-[#f5d061]">5:00 AM</p>
                 <p className="text-[11px] uppercase tracking-wider text-neutral-400 mt-0.5">Early Open</p>
               </div>
               <div className="border-x border-neutral-800">
